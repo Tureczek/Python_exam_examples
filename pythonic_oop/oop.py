@@ -1,3 +1,17 @@
+class Park:
+
+    def __init(self):
+        self.__animals = []
+
+    @property
+    def animals(self):
+        return self.__animals
+
+    @animals.setter
+    def animals(self, animal):
+        pass
+
+
 class Dinosaur:
 
     # Make the class initialisable.
@@ -6,25 +20,30 @@ class Dinosaur:
         self.dinosaur_type = args[1]
         self.sound = args[2]
         self.food_type = args[3]
+        self.gender = args[4]
 
     # Make the Dinosaur class callable.
     def __call__(self):
         return f'Name: {self.__dinosaur_name}, Type: {self.__dinosaur_type}, Sound: {self.__sound}, ' \
-               f'Food type: {self.__food_type} '
+               f'Food type: {self.__food_type}, Gender: {self.__gender} '
 
     # Make the Dinosaur class addable.
     def __add__(self, other):
+        if self.__gender == other.__gender:
+            return 'No new dinosaur was made!'
         name = self.__dinosaur_name[:int(len(self.__dinosaur_name) / 2)] + \
                other.__dinosaur_name[-int(len(other.__dinosaur_name) / 2):]
         type = self.__dinosaur_type[:int(len(self.__dinosaur_type) / 2)] + \
                other.__dinosaur_type[-int(len(other.__dinosaur_type) / 2):]
         sound = self.__sound[:int(len(self.__sound) / 2)] + other.__sound[-int(len(other.__sound) / 2):]
         if self.__food_type == other.__food_type:
-            return f'Name: {name}, Type: {type}, Sound: {sound}, Food type: {self.__food_type}'
+            return f'{self.__dinosaur_name} & {other.__dinosaur_name} made a new dinosaur: \n' \
+                   f'Name: {name}, Type: {type}, Sound: {sound}, Food type: {self.__food_type}'
         if self.__food_type != other.__food_type:
-            return f'Name: {name}, Type: {type}, Sound: {sound}, Food type: Omnivore'
+            return f'{self.__dinosaur_name} & {other.__dinosaur_name} made a new dinosaur: \n' \
+                   f'Name: {name}, Type: {type}, Sound: {sound}, Food type: Omnivore'
 
-#######################################################################################################################
+    ###################################################################################################################
 
     # Dinosaur Name.
     @property
@@ -62,13 +81,22 @@ class Dinosaur:
     def food_type(self, food_type):
         self.__food_type = food_type
 
+    # Gender.
+    @property
+    def gender(self):
+        return self.__gender
+
+    @gender.setter
+    def gender(self, gender):
+        self.__gender = gender
+
 
 #######################################################################################################################
 
 # Creating a couple of dinosaurs.
-raptor = Dinosaur('Raptuella', 'Raptor', 'Rhaaarr', 'Carnivore')
-brachiosaurus = Dinosaur('Brandon', 'Brachiosaurus', 'Mhhuuurrrh', 'Herbivore')
-coloradisaurus = Dinosaur('Conrad', 'Coloradisaurus', 'Mvih Mvah', 'Omnivore')
+raptor = Dinosaur('Raptuella', 'Raptor', 'Rhaaarr', 'Carnivore', 'Male')
+brachiosaurus = Dinosaur('Brandon', 'Brachiosaurus', 'Mhhuuurrrh', 'Herbivore', 'Female')
+coloradisaurus = Dinosaur('Conrad', 'Coloradisaurus', 'Mvih Mvah', 'Omnivore', 'Female')
 
 # Using __call__ function.
 print(raptor())
@@ -78,4 +106,4 @@ print(brachiosaurus + raptor)
 print(coloradisaurus + raptor)
 print(raptor + coloradisaurus)
 print(raptor + brachiosaurus)
-
+print(coloradisaurus + brachiosaurus)
