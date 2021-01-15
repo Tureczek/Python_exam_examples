@@ -1,4 +1,6 @@
 class Dinosaur:
+
+    # Make the class initialisable.
     def __init__(self, *args):
         self.dinosaur_name = args[0]
         self.dinosaur_type = args[1]
@@ -22,7 +24,7 @@ class Dinosaur:
         if self.__food_type != other.__food_type:
             return f'Name: {name}, Type: {type}, Sound: {sound}, Food type: Omnivore'
 
-    #######################################################################################################################
+#######################################################################################################################
 
     # Dinosaur Name.
     @property
