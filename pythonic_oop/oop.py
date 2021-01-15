@@ -22,6 +22,8 @@ class Dinosaur:
         if self.__food_type != other.__food_type:
             return f'Name: {name}, Type: {type}, Sound: {sound}, Food type: Omnivore'
 
+    #######################################################################################################################
+
     # Dinosaur Name.
     @property
     def dinosaur_name(self):
@@ -59,13 +61,19 @@ class Dinosaur:
         self.__food_type = food_type
 
 
+#######################################################################################################################
+
+# Creating a couple of dinosaurs.
 raptor = Dinosaur('Raptuella', 'Raptor', 'Rhaaarr', 'Carnivore')
 brachiosaurus = Dinosaur('Brandon', 'Brachiosaurus', 'Mhhuuurrrh', 'Herbivore')
 coloradisaurus = Dinosaur('Conrad', 'Coloradisaurus', 'Mvih Mvah', 'Omnivore')
 
+# Using __call__ function.
 print(raptor())
 
+# Using __add__ function. (To make new types of dinosaurs)
 print(brachiosaurus + raptor)
 print(coloradisaurus + raptor)
 print(raptor + coloradisaurus)
 print(raptor + brachiosaurus)
+
