@@ -42,9 +42,9 @@ def yield_presentation():
 
 #Using next on yield strings showing a stop iteration
 demo_of_yield = yield_presentation()
-print(next(demo_of_yield))
-print(next(demo_of_yield))
-print(next(demo_of_yield))
+#print(next(demo_of_yield))
+#print(next(demo_of_yield))
+#print(next(demo_of_yield))
 #print(next(demo_of_yield)) # produces a StopIteration exception
 
 
@@ -82,4 +82,12 @@ def infinite_palindrome():
             if i is not None: # This could happen if next() is called on the generator object.
                 num = i
         num += 1
+
+
+pal_gen_send = infinite_palindrome()
+for i in pal_gen_send:
+    digits = len(str(i))
+    print(pal_gen_send.send(10**(digits)))
+
+
 ########################################################################################################################
