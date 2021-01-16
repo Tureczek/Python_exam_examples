@@ -46,3 +46,40 @@ print(next(demo_of_yield))
 print(next(demo_of_yield))
 print(next(demo_of_yield))
 #print(next(demo_of_yield)) # produces a StopIteration exception
+
+
+########################################################################################################################
+'''
+Advanced generator methods:
+
+- .send()
+- .throw()
+- .close()
+'''
+
+# Creating palindrome function and using advanced methods
+
+def is_palindrome(num):
+    if num // 10 == 0:
+        return False
+    temp = num
+    reversed_num = 0
+
+    while temp != 0:
+        reversed_num = (reversed_num * 10) + (temp % 10)
+        temp = temp // 10
+
+    if num == reversed_num:
+        return True
+    else:
+        return False
+
+def infinite_palindrome():
+    num = 0
+    while True:
+        if is_palindrome(num): # With python 2.5 yield was introduced as an expression rather than a statement.
+            i = (yield num) # But can still be used as an expression as shown in yield_presentation().
+            if i is not None: # This could happen if next() is called on the generator object.
+                num = i
+        num += 1
+########################################################################################################################
