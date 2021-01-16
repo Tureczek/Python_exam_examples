@@ -83,11 +83,39 @@ def infinite_palindrome():
                 num = i
         num += 1
 
+# .send() is good when...
+def adv_send():
+    pal_gen_send = infinite_palindrome()
+    for i in pal_gen_send:
+        digits = len(str(i))
+        print(f'The digits: {digits} \n', pal_gen_send.send(10**(digits)))
 
-pal_gen_send = infinite_palindrome()
-for i in pal_gen_send:
-    digits = len(str(i))
-    print(pal_gen_send.send(10**(digits)))
+# .throw() is good when...
+def adv_throw():
+    pal_gen_throw = infinite_palindrome()
+    for i in pal_gen_throw:
+        print(i)
+        digits = len(str(i))
+        if digits == 5:
+            pal_gen_throw.throw(ValueError("We don't like large palindromes"))
+        pal_gen_throw.send(10** (digits))
+
+
+# .close() is good when...
+
+def adv_close():
+    pal_gen_close = infinite_palindrome()
+    for i in pal_gen_close:
+        print(i)
+        digits = len(str(i))
+        if digits == 5:
+            pal_gen_close.close()
+        pal_gen_close.send(10 ** (digits))
+
+
+
+
+########################################################################################################################
 
 
 ########################################################################################################################
