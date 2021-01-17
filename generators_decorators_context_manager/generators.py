@@ -115,7 +115,22 @@ def adv_close():
 
 
 
+
 ########################################################################################################################
+# Using Generators as a data pipeline
+
+'''
+ -   Read every line of the file.
+ -   Split each line into a list of values.
+ -   Extract the column names.
+ -   Use the column names and lists to create a dictionary.
+ -   Filter out the rounds you aren’t interested in.
+ -   Calculate the total and average values for the rounds you are interested in.
+'''
+
+
+filen
+
 
 
 ########################################################################################################################
