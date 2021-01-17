@@ -1,15 +1,16 @@
+import random
+
+
 class Park:
 
-    def __init(self):
-        self.__animals = []
+    def __init__(self):
+        self.animals = []
 
-    @property
-    def animals(self):
-        return self.__animals
-
-    @animals.setter
-    def animals(self, animal):
-        pass
+    def __str__(self):
+        representation = 'Printing list of animals in park:\n'
+        for x in self.animals:
+            representation += f'{x}\n'
+        return representation
 
 
 class Dinosaur:
@@ -36,16 +37,28 @@ class Dinosaur:
         type = self.__dinosaur_type[:int(len(self.__dinosaur_type) / 2)] + \
                other.__dinosaur_type[-int(len(other.__dinosaur_type) / 2):]
         sound = self.__sound[:int(len(self.__sound) / 2)] + other.__sound[-int(len(other.__sound) / 2):]
+        if random.uniform(0, 1) == 0:
+            gender = 'female'
+        else:
+            gender = 'male'
         if self.__food_type == other.__food_type:
             return f'{self.__dinosaur_name} & {other.__dinosaur_name} made a new dinosaur: \n' \
-                   f'Name: {name}, Type: {type}, Sound: {sound}, Food type: {self.__food_type}'
+                   f'\u001b[31mName:\u001b[0m {name}, \u001b[32mType:\u001b[0m {type}, \u001b[33mSound:\u001b[0m ' \
+                   f'{sound}, \u001b[35mFood type:\u001b[0m {self.__food_type}, \u001b[36mGender:\u001b[0m {gender}'
         if self.__food_type != other.__food_type:
             return f'{self.__dinosaur_name} & {other.__dinosaur_name} made a new dinosaur: \n' \
-                   f'Name: {name}, Type: {type}, Sound: {sound}, Food type: Omnivore'
+                   f'\u001b[31mName:\u001b[0m {name}, \u001b[32mType:\u001b[0m {type}, \u001b[33mSound:\u001b[0m ' \
+                   f'{sound}, \u001b[35mFood type:\u001b[0m Omnivore, \u001b[36mGender:\u001b[0m {gender}'
+
+    # Make a string representation of the dinosaur.
+    def __str__(self):
+        return f'\u001b[31mName:\u001b[0m {self.__dinosaur_name}, \u001b[32mType:\u001b[0m {self.__dinosaur_type}, ' \
+               f'\u001b[33mSound:\u001b[0m {self.__sound}, \u001b[35mFood type:\u001b[0m {self.__food_type}, ' \
+               f'\u001b[36mGender:\u001b[0m {self.__gender} '
 
     ###################################################################################################################
 
-    # Dinosaur Name.
+    # Dinosaur Name getters and setters.
     @property
     def dinosaur_name(self):
         return self.__dinosaur_name
@@ -54,7 +67,7 @@ class Dinosaur:
     def dinosaur_name(self, dinosaur_name):
         self.__dinosaur_name = dinosaur_name
 
-    # Dinosaur Type.
+    # Dinosaur Type getters and setters.
     @property
     def dinosaur_type(self):
         return self.__dinosaur_type
@@ -63,7 +76,7 @@ class Dinosaur:
     def dinosaur_type(self, dinosaur_type):
         self.__dinosaur_type = dinosaur_type
 
-    # Sound.
+    # Sound getters and setters.
     @property
     def sound(self):
         return self.__sound
@@ -72,7 +85,7 @@ class Dinosaur:
     def sound(self, sound):
         self.__sound = sound
 
-    # Food type.
+    # Food type getters and setters.
     @property
     def food_type(self):
         return self.__food_type
@@ -81,7 +94,7 @@ class Dinosaur:
     def food_type(self, food_type):
         self.__food_type = food_type
 
-    # Gender.
+    # Gender getters and setters.
     @property
     def gender(self):
         return self.__gender
@@ -93,13 +106,26 @@ class Dinosaur:
 
 #######################################################################################################################
 
+# Creating a park for dinosaurs.
+park = Park()
+
 # Creating a couple of dinosaurs.
 raptor = Dinosaur('Raptuella', 'Raptor', 'Rhaaarr', 'Carnivore', 'Male')
 brachiosaurus = Dinosaur('Brandon', 'Brachiosaurus', 'Mhhuuurrrh', 'Herbivore', 'Female')
 coloradisaurus = Dinosaur('Conrad', 'Coloradisaurus', 'Mvih Mvah', 'Omnivore', 'Female')
 
+# Putting dinosaurs in park
+park.animals.append(raptor)
+park.animals.append(brachiosaurus)
+park.animals.append(coloradisaurus)
+
+print(park)
+
 # Using __call__ function.
 print(raptor())
+
+# Using __str__ function.
+print(raptor)
 
 # Using __add__ function. (To make new types of dinosaurs)
 print(brachiosaurus + raptor)
