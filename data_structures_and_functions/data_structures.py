@@ -12,49 +12,96 @@
 
 def Example_1_List():
     List = [1, True, "name", ["name1", "name2"]]
-    print(List)
-
-    # Basic functions
-    print("Len of list", len(List))
-    print("Type of list", type(List))
-    print("Id of list", id(List))
-
-    # Konkatenerer
-    print("Konkatenerer med +", List + [1, 2, 3, 4])
-    print("Konkatenerer med *", List * 2)
-
-    print(List[:])
-
-Example_1_List()
-
-
-def Example_1_Tuple():
     Tuple = (1, 2, 3, 4)
-
-
-def Example_1_Sets():
-    Set = {1, 2, 3, 4}
-    print(Set)
-
-    # Add
-    Set.add("Apple")
-    Set.add("Orange")
-    Set.add("Squash")
-
-    # Show by running code multiple times
-    print(f"The set's order is random: {Set}")
-
-
-def Example_1_Dict():
+    Set = {1, 2, 3, 4, "banana"}
     Dictionaries = {
         "brand": "Ford",
         "model": "Mustang",
         "year": 1964
     }
-    # Dictionary items are unordered, changeable, and does not allow duplicates.
+    print("\033[1m" + "Original Data Structures" + "\033[0m")
+    print(f" List: {List}", "\n", f"Tuple: {Tuple}", "\n", f"Set: {Set}", "\n", f"Dictionarie: {Dictionaries}", "\n")
 
+
+    # Access Items
+    print("\033[1m" + "Access Items" + "\033[0m")
+    print(f" Accessing data from List: {List[0]}")
+    print(f" Accessing data from Tuple: {Tuple[0]}")
+    print(f" Accessing data from Set:", {x for x in Set})
+    print(f" Accessing data from Dictinarie: {Dictionaries.get('model')}")
+
+    # Change item
+    print("\033[1m" + "Change Item" + "\033[0m")
+    List[0] = "Changed Item"
+    List[1:2] = ["Changed item", "New Item"]
+
+    # Tuples are unchangeable, or immutable
+
+    # Sets unordered, unchangeable, and do not allow duplicate values
+
+    Dictionaries.update({"year": "2021"})
+    print(f" List: {List}", "\n", f"Dictionarie: {Dictionaries}", "\n")
+
+
+    # Add item
+    print("\033[1m" + "Add" + "\033[0m")
+    List.append("appended item")
+    List.insert(2, "inserted Item")
+    List.extend(["E", "x", "t", "e", "n", "d"])
+
+    # Tuples cannot be change because
+
+    Set.add("Added item")
+    tempSet = {"temp1", "temp2"}
+    Set.update(tempSet)  # To add items from another set into the current set
+
+    Dictionaries["color"] = "Added Color"
+    Dictionaries.update({"updateColor": "Updated Color"})
+    print(f" List: {List}", "\n", f"Set: {Set}", "\n", f"Dictionarie: {Dictionaries}", "\n")
+
+
+    # Loop Through
+    print("\033[1m" + "Loop Through" + "\033[0m")
+
+    # List
+    for x in List:
+        print(x)
+
+    for i in range(len(List)):
+        print(List[i])
+
+    # Tuple
+    for x in Tuple:
+        print(x)
+
+    for i in range(len(Tuple)):
+        print(Tuple[i])
+
+    # Dictionary
+
+    # Print all key names in the dictionary, one by one:
+    for x in Dictionaries:
+        print(x)
+
+    # Print all values in the dictionary, one by one:
+    for x in Dictionaries:
+        print(Dictionaries[x])
+
+    # You can also use the values() method to return values of a dictionary:
+    for x in Dictionaries.values():
+        print(x)
+
+    # You can use the keys() method to return the keys of a dictionary:
+    for x in Dictionaries.keys():
+        print(x)
+
+    # Loop through both keys and values, by using the items() method:
+    for x, y in Dictionaries.items():
+        print(x, y)
 
 Example_1_List()
+
+
 
 
 # _____________________List comprehensions__________________________#
