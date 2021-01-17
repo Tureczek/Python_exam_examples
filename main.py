@@ -1,6 +1,6 @@
 from generators_decorators_context_manager.decorators import before_and_after, timer, time_stamp, cache, count_calls
 
-
+print("test")
 # Showing a simple decorator
 def hello_function():
     print('Hello world')
