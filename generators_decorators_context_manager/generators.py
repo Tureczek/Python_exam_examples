@@ -1,7 +1,5 @@
 import sys
 import cProfile
-# Keyword is yield, this makes a generator
-
 
 ########################################################################################################################
 # Generators vs list example
@@ -11,8 +9,8 @@ nums_squared_gc = (num**2 for num in range(10000))  # Generator comprehension
 
 def generator_memory():
     print('Showing the memory reserved by a list and a generator\n')
-    print('The size of list: ', sys.getsizeof(nums_squared_lc), ' bytes')
-    print('the size of generator: ', sys.getsizeof(nums_squared_gc), ' bytes')
+    print(f'The size of list: {sys.getsizeof(nums_squared_lc)} bytes')
+    print(f'The size of generator: {sys.getsizeof(nums_squared_gc)}  bytes')
 
 # Generators for optimizing memory
 # If the list is smaller than the running machine’s available memory, then list comprehensions can be faster to evaluate.
@@ -128,9 +126,23 @@ def adv_close():
  -   Calculate the total and average values for the rounds you are interested in.
 '''
 
+def data_pipeline():
+    file_name = 'techcrunch.csv'
+    lines = (line for line in open(file_name)) # Generator expression
+    list_line = (s.rstrip().split(',') for s in lines) # iterates through generator lines
+    cols = next(list_line) #pass first column
 
-filen
+    company_dicts = (dict(zip(cols, data)) for data in list_line) # Creating a dict
 
+    funding = (
+        int(company_dicts['raisedAmt'])
+        for company_dicts in company_dicts
+        if company_dicts['round'] == 'a'
+    )
 
+    print('\n'.join([str(i) for i in company_dicts]))
+
+    total_series_a = sum(funding)
+    #print(f'Total series A fundraising: ${total_series_a}')
 
 ########################################################################################################################
