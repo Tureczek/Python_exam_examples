@@ -11,10 +11,26 @@
 
 
 def Example_1_List():
-    List = [1, 2, 3, 4]
+    List = [1, True, "name", ["name1", "name2"]]
+    print(List)
+
+    # Basic functions
+    print("Len of list", len(List))
+    print("Type of list", type(List))
+    print("Id of list", id(List))
+
+    # Konkatenerer
+    print("Konkatenerer med +", List + [1, 2, 3, 4])
+    print("Konkatenerer med *", List * 2)
+
+    print(List[:])
+
+Example_1_List()
+
 
 def Example_1_Tuple():
     Tuple = (1, 2, 3, 4)
+
 
 def Example_1_Sets():
     Set = {1, 2, 3, 4}
@@ -28,8 +44,8 @@ def Example_1_Sets():
     # Show by running code multiple times
     print(f"The set's order is random: {Set}")
 
-def Example_1_Dict():
 
+def Example_1_Dict():
     Dictionaries = {
         "brand": "Ford",
         "model": "Mustang",
