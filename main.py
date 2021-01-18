@@ -5,10 +5,10 @@ print("test")
 def hello_function():
     print('Hello world')
 
+hello_function = before_and_after(hello_function)
 
-# hello_function = before_and_after(hello_function)
-
-# hello_function()
+#print(hello_function)
+#hello_function()
 
 
 # Can also be called like this
@@ -37,6 +37,7 @@ def waste_some_time(num_times):
     for i in range(num_times):
         sum([i**2 for i in range(100000)])
 
+#print(waste_some_time)
 #waste_some_time(10)
 #waste_some_time(1)
 
@@ -54,8 +55,9 @@ def fibonacci(num):
         return num
     return fibonacci(num - 1) + fibonacci(num - 2)
 
-#print(fibonacci(10))
-#print(fibonacci(11))
-#print(fibonacci(8))
-#print(fibonacci(17))
+print(fibonacci(10))
+print(fibonacci(11))
+waste_some_time(10)
+print(fibonacci(8))
+print(fibonacci(17))
 

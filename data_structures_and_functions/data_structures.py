@@ -1,130 +1,150 @@
+from generators_decorators_context_manager.decorators import timer
 # _________________________Data Structures__________________________#
 # Data Structures:
-#       List = [val, val, val, val] | List items are ordered, changeable, and allow duplicate values.
-#       Tuple = (val, val, val, val) | A tuple is a collection which is ordered and unchangeable.
-#       Set = {val, val, val, val} | A set is a collection which is both unordered and unindexed
-#       Dictionaries = {
+#       myList = [val, val, val, val] | myList items are ordered, changeable, and allow duplicate values and can be accessed by index.
+#       myTuple = (val, val, val, val) | A myTuple is a collection which is ordered and unchangeable.
+#       mySet = {val, val, val, val} | A mySet is a collection which is both unordered and unindexed and cannot have duplicate
+#       myDictionary = {
 #                       "key": "value",
 #                       "key": "value",
 #                       "key": "value"
 #       }
 
+myList = [1, True, "name", ["name1", "name2"]]
+myTuple = (1, 2, 3, 4)
+mySet = {1, 2, 3, 4, "banana"}
+myDictionary = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+}
 
-def Example_1_List():
-    List = [1, True, "name", ["name1", "name2"]]
-    Tuple = (1, 2, 3, 4)
-    Set = {1, 2, 3, 4, "banana"}
-    Dictionaries = {
+def resetDataStructures():
+    myList = [1, True, "name", ["name1", "name2"]]
+    myTuple = (1, 2, 3, 4)
+    mySet = {1, 2, 3, 4, "banana"}
+    myDictionary = {
         "brand": "Ford",
         "model": "Mustang",
         "year": 1964
     }
-    print("\033[1m" + "Original Data Structures" + "\033[0m")
-    print(f" List: {List}", "\n", f"Tuple: {Tuple}", "\n", f"Set: {Set}", "\n", f"Dictionarie: {Dictionaries}", "\n")
 
+def Example_1_myList():
+
+    print("\033[1m" + "Original Data Structures" + "\033[0m")
+    print(f" myList: {myList}", "\n", f"myTuple: {myTuple}", "\n", f"mySet: {mySet}", "\n", f"Dictionarie: {myDictionary}", "\n")
+
+    
     # Access Items
     print("\033[1m" + "Access Items" + "\033[0m")
-    print(f" Accessing data from List: {List[0]}")
-    print(f" Accessing data from Tuple: {Tuple[0]}")
-    print(f" Accessing data from Set:", {x for x in Set})
-    print(f" Accessing data from Dictinarie: {Dictionaries.get('model')}")
+    print(f" Accessing data from myList: {myList[0]}")
+    print(f" Accessing data from myTuple: {myTuple[0]}")
+    print(" Accessing data from mySet: ", {x for x in mySet})
+    print(f" Accessing data from Dictinarie: {myDictionary.get('model')} \n")
 
     # Change item
     print("\033[1m" + "Change Item" + "\033[0m")
-    List[0] = "Changed Item"
-    List[1:2] = ["Changed item", "New Item"]
+    myList[0] = "Changed Item"
+    myList[1:2] = ["Second Changed item", "New Item"] #Tilføj Note
 
-    # Tuples are unchangeable, or immutable
+    # myTuples are unchangeable, or immutable
 
-    # Sets unordered, unchangeable, and do not allow duplicate values
+    # mySets unordered, unchangeable, and do not allow duplicate values
 
-    Dictionaries.update({"year": "2021"})
-    print(f" List: {List}", "\n", f"Dictionarie: {Dictionaries}", "\n")
+    myDictionary.update({"year": "2021"})
+    print(f" myList: {myList}", "\n", f"Dictionary: {myDictionary}", "\n")
+    resetDataStructures()
 
     # Add item
     print("\033[1m" + "Add" + "\033[0m")
-    List.append("appended item")
-    List.insert(2, "inserted Item")
-    List.extend(["E", "x", "t", "e", "n", "d"])
+    myList.append("appended item")
+    myList.insert(2, "inserted Item")
+    myList.extend(["Extended", "myList"])
 
-    # Tuples cannot be change because
 
-    Set.add("Added item")
-    tempSet = {"temp1", "temp2"}
-    Set.update(tempSet)  # To add items from another set into the current set
+    # myTuples cannot be change because immutable
 
-    Dictionaries["color"] = "Added Color"
-    Dictionaries.update({"updateColor": "Updated Color"})
-    print(f" List: {List}", "\n", f"Set: {Set}", "\n", f"Dictionarie: {Dictionaries}", "\n")
+    mySet.add("Added item")
+    tempMySet = {"temp1", "temp2"}
+    mySet.update(tempMySet)  # To add items from another mySet into the current mySet
+
+    myDictionary["color"] = "Added Color"
+    myDictionary.update({"updateColor": "Updated Color"})
+    print(f" myList: {myList}", "\n", f"mySet: {mySet}", "\n", f"myDictionary: {myDictionary}", "\n")
+    resetDataStructures()
 
     # Loop Through
     print("\033[1m" + "Loop Through" + "\033[0m")
 
-    # List
-    for x in List:
+    # myList
+    for i in myList:
+        print(i)
+
+    for i in range(len(myList)):
+        print(myList[i])
+
+    # myTuple
+    for x in myTuple:
         print(x)
 
-    for i in range(len(List)):
-        print(List[i])
+    for i in range(len(myTuple)):
+        print(myTuple[i])
 
-    # Tuple
-    for x in Tuple:
-        print(x)
-
-    for i in range(len(Tuple)):
-        print(Tuple[i])
+    # Set
 
     # Dictionary
 
     # Print all key names in the dictionary, one by one:
-    for x in Dictionaries:
+    for x in myDictionary:
         print(x)
 
     # Print all values in the dictionary, one by one:
-    for x in Dictionaries:
-        print(Dictionaries[x])
+    for x in myDictionary:
+        print(myDictionary[x])
 
     # You can also use the values() method to return values of a dictionary:
-    for x in Dictionaries.values():
+    for x in myDictionary.values():
         print(x)
 
     # You can use the keys() method to return the keys of a dictionary:
-    for x in Dictionaries.keys():
+    for x in myDictionary.keys():
         print(x)
 
     # Loop through both keys and values, by using the items() method:
-    for x, y in Dictionaries.items():
-        print(x, y)
+    print("\u001b[31m"
+          "Using mydictionary.items():"
+          "\u001b[0m")
+    for x, y in myDictionary.items():
+        print("Key and value", x, y)
 
 
-Example_1_List()
 
-
-# _____________________List comprehensions__________________________#
-# List Comprehensions:
+# _____________________myList comprehensions__________________________#
+# myList Comprehensions:
 #       [ expression for val in collection ]
 #       [ expression for val in collection if <statement> ]
 #       [ expression for val in collection if <statement_1> and <statement_2> ]
 #       [ expression for value1 in collection_1 and value2 in val in collection_2 ]
 
 
-# Example_1 | Showing [ expression for val in collection ] | This example shows how you list comprehensions work vs normal
-def Example_1_List_Comprehension():
-    list1 = []
+# Example_1 | Showing [ expression for val in collection ] | This example shows how you myList comprehensions work vs a normal forloop
+
+def Example_1_myList_Comprehension():
+    myList1 = []
 
     for i in range(1, 101):
-        list1.append(i)
-    print(list1)
+        myList1.append(i)
+    print(myList1)
 
     # ---------------------------------------------------------------------------------------------------------
 
     # OR print([i for i in range(1, 101)])
-    list2 = [i for i in range(1, 101)]
-    print(list2)
+    myList2 = [i for i in range(1, 101)]
+    print(myList2)
 
 
 # Example_2 | Showing [ expression for val in collection if <statement> ] | How to sort movies using comprehension with if statement
-def Example_2_List_Comprehension():
+def Example_2_myList_Comprehension():
     movies1 = ["Avatar", "Babe watch", "Ghostbusters", "Amandas Vacation", "Gattaca", "Star wars", "Gandhi"]
     foundMovies1 = []
 
@@ -141,8 +161,8 @@ def Example_2_List_Comprehension():
     print(foundMovies)
 
 
-# Each element in the forloop is a tuple, then we check if the year is under 2000 and print only the title
-def Example_3_List_Comprehension():
+# Each element in the forloop is a myTuple, then we check if the year is under 2000 and print only the title
+def Example_3_myList_Comprehension():
     movies1 = [("Avatar", 1942), ("Babe watch", 1999), ("Ghostbusters", 2122), ("Amandas Vacation", 208),
                ("Gattaca", 1818), ("Star wars", 1922), ("Gandhi", 2011)]
 
@@ -152,9 +172,12 @@ def Example_3_List_Comprehension():
     print(foundMoviesByYear)
 
 
-def Example_4_List_Comprehension():
-    list1 = [2, -5, 8]
-    print(f"List * 4 {list1 * 4}")
+def Example_4_myList_Comprehension():
+    myList1 = [2, -5, 8]
+    print(f"myList * 4 {myList1 * 4}")
 
-    list2 = [4 * x for x in list1]
-    print(f"List2 with comprehension {list2}")
+
+    myList2 = [4 * x for x in myList1]
+    print(f"myList2 with comprehension {myList2}")
+
+Example_4_myList_Comprehension()

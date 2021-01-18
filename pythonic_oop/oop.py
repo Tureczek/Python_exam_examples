@@ -119,17 +119,18 @@ park.animals.append(raptor)
 park.animals.append(brachiosaurus)
 park.animals.append(coloradisaurus)
 
-print(park)
+# Using __str__ function for Park.
+# print(park)
 
 # Using __call__ function.
-print(raptor())
+# print(raptor())
 
 # Using __str__ function.
-print(raptor)
+# print(raptor)
 
 # Using __add__ function. (To make new types of dinosaurs)
-print(brachiosaurus + raptor)
-print(coloradisaurus + raptor)
-print(raptor + coloradisaurus)
-print(raptor + brachiosaurus)
-print(coloradisaurus + brachiosaurus)
+#print(brachiosaurus + raptor)
+#print(coloradisaurus + raptor)
+#print(raptor + coloradisaurus)
+#print(raptor + brachiosaurus)
+#print(coloradisaurus + brachiosaurus)
