@@ -1,7 +1,7 @@
 # _________________________Data Structures__________________________#
 # Data Structures:
-#       List = [val, val, val, val]
-#       Tuple = (val, val, val, val)
+#       List = [val, val, val, val] | List items are ordered, changeable, and allow duplicate values.
+#       Tuple = (val, val, val, val) | A tuple is a collection which is ordered and unchangeable.
 #       Set = {val, val, val, val} | A set is a collection which is both unordered and unindexed
 #       Dictionaries = {
 #                       "key": "value",
@@ -22,7 +22,6 @@ def Example_1_List():
     print("\033[1m" + "Original Data Structures" + "\033[0m")
     print(f" List: {List}", "\n", f"Tuple: {Tuple}", "\n", f"Set: {Set}", "\n", f"Dictionarie: {Dictionaries}", "\n")
 
-
     # Access Items
     print("\033[1m" + "Access Items" + "\033[0m")
     print(f" Accessing data from List: {List[0]}")
@@ -42,7 +41,6 @@ def Example_1_List():
     Dictionaries.update({"year": "2021"})
     print(f" List: {List}", "\n", f"Dictionarie: {Dictionaries}", "\n")
 
-
     # Add item
     print("\033[1m" + "Add" + "\033[0m")
     List.append("appended item")
@@ -58,7 +56,6 @@ def Example_1_List():
     Dictionaries["color"] = "Added Color"
     Dictionaries.update({"updateColor": "Updated Color"})
     print(f" List: {List}", "\n", f"Set: {Set}", "\n", f"Dictionarie: {Dictionaries}", "\n")
-
 
     # Loop Through
     print("\033[1m" + "Loop Through" + "\033[0m")
@@ -99,9 +96,8 @@ def Example_1_List():
     for x, y in Dictionaries.items():
         print(x, y)
 
+
 Example_1_List()
-
-
 
 
 # _____________________List comprehensions__________________________#
