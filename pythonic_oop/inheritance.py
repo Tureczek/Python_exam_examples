@@ -29,6 +29,9 @@ class Granddad(Person):
     def tell_bad_joke(self):
         print(f'{self.name}: "{self.__tell_bad_joke}"')
 
+    def fart_loudly(self):
+        print(f'{self.name} makes a loud fart!')
+
 
 class Mom(Grandmom):
 
@@ -60,9 +63,7 @@ class Kid(Mom, Dad):
 
 
 gm = Grandmom('Marge')
-
 d = Dad('Peter')
-
 k = Kid('Jason')
 
 k.cook()
@@ -70,3 +71,7 @@ k.cook_vegan()
 k.sound_wise()
 k.make_annoying_sounds()
 k.tell_bad_joke()
+
+# Showing which methods is available to a class (Kid):
+print('Showing available methods:')
+print([x for x in dir(Kid) if callable(getattr(Kid, x)) if not x.startswith('__')])
