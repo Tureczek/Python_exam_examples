@@ -143,31 +143,31 @@ def data_Structures_Loop_Through():
 
     # Print all key names in the dictionary, one by one:
     for i in myDictionary:
-        print("Data from \33[34m Dictionary: \033[0m:", i)
+        print("Data from\33[34m Dictionary: \033[0m:", i)
 
     print("-")
 
     # Print all values in the dictionary, one by one:
     for i in myDictionary:
-        print("Data from \33[34m Dictionary: \033[0m: using index:", myDictionary[i])
+        print("Data from\33[34m Dictionary: \033[0m: using index:", myDictionary[i])
 
     print("-")
 
     # You can also use the values() method to return values of a dictionary:
     for x in myDictionary.values():
-        print("Data from \33[34m Dictionary: \033[0m: using .values: ", (x))
+        print("Data from\33[34m Dictionary: \033[0m: using .values: ", (x))
 
     print("-")
 
     # You can use the keys() method to return the keys of a dictionary:
     for i in myDictionary.keys():
-        print("Data from \33[34m Dictionary: \033[0m: using .keys():", i)
+        print("Data from\33[34m Dictionary: \033[0m: using .keys():", i)
 
     print("-")
 
     # Loop through both keys and values, by using the items() method:
     for i, j in myDictionary.items():
-        print("Key and Value from \33[34m Dictionary: \033[0m:", i, j)
+        print("Key and Value from\33[34m Dictionary: \033[0m:", i, j)
     print("__________________________________________________________")
 
 
