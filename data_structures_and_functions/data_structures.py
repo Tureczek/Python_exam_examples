@@ -105,10 +105,6 @@ def data_Structures_Add():
 
 
 def data_Structures_Loop_Through():
-    #print(" Accessing data from " + "\33[31m" + "myList:" + "\033[0m", f"{myList[0]}")
-    #print(" Accessing data from " + "\33[32m" + "myTuple:" + "\033[0m", f"{myTuple[0]}")
-    #print(" Accessing data from " + "\33[35m" + "mySet:" + "\033[0m", {x for x in mySet})
-    #print(" Accessing data from " + "\33[34m" + "Dictionary:" + "\033[0m", f"{myDictionary.get('model')}" + "\n")
 
     print("\033[1m" + "Loop Through" + "\033[0m")
     printOriginalDataStructures()
