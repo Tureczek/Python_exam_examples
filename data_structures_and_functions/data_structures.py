@@ -1,4 +1,5 @@
 from generators_decorators_context_manager.decorators import timer
+
 # _________________________Data Structures__________________________#
 # Data Structures:
 #       myList = [val, val, val, val] | myList items are ordered, changeable, and allow duplicate values and can be accessed by index.
@@ -19,105 +20,161 @@ myDictionary = {
     "year": 1964
 }
 
-def resetDataStructures():
-    myList = [1, True, "name", ["name1", "name2"]]
-    myTuple = (1, 2, 3, 4)
-    mySet = {1, 2, 3, 4, "banana"}
-    myDictionary = {
+
+def printOriginalDataStructures():
+    print("\033[1m" + "Original Data Structures" + "\033[0m")
+    myOriginalList = [1, True, "name", ["name1", "name2"]]
+    myOriginalTuple = (1, 2, 3, 4)
+    myOriginalSet = {1, 2, 3, 4, "banana"}
+    myOriginalDictionary = {
         "brand": "Ford",
         "model": "Mustang",
         "year": 1964
     }
+    print("\33[31m", f"myList: {myOriginalList}", "\33[32m", "\n", f"myTuple: {myOriginalTuple}", "\33[35m", "\n", f"mySet: {myOriginalSet}", "\33[34m" "\n",
+          f"Dictionarie: {myOriginalDictionary}", "\n" "\033[0m")
 
-def Example_1_myList():
 
-    print("\033[1m" + "Original Data Structures" + "\033[0m")
-    print(f" myList: {myList}", "\n", f"myTuple: {myTuple}", "\n", f"mySet: {mySet}", "\n", f"Dictionarie: {myDictionary}", "\n")
-
-    
-    # Access Items
+def data_Structures_Access_Item():
     print("\033[1m" + "Access Items" + "\033[0m")
-    print(f" Accessing data from myList: {myList[0]}")
-    print(f" Accessing data from myTuple: {myTuple[0]}")
-    print(" Accessing data from mySet: ", {x for x in mySet})
-    print(f" Accessing data from Dictinarie: {myDictionary.get('model')} \n")
+    printOriginalDataStructures()
 
-    # Change item
+    print(" Accessing data from " + "\33[31m" + "myList:" + "\033[0m", f"{myList[0]}")
+    print(" Accessing data from " + "\33[32m" + "myTuple:" + "\033[0m", f"{myTuple[0]}")
+    print(" Accessing data from " + "\33[35m" + "mySet:" + "\033[0m", {x for x in mySet})
+    print(" Accessing data from " + "\33[34m" + "Dictionary:" + "\033[0m", f"{myDictionary.get('model')}" + "\n")
+    print("__________________________________________________________")
+
+
+def data_Structures_Change_Item():
     print("\033[1m" + "Change Item" + "\033[0m")
+    printOriginalDataStructures()
+
     myList[0] = "Changed Item"
-    myList[1:2] = ["Second Changed item", "New Item"] #Tilføj Note
+    myList[1:2] = ["Splitted changed item", "New Item"]  # Explanation ->
+    # This method does 2 things.
+    #   1. "[1:" will take item at List[1] and replace with "Splitted changed item".
+    #   2. ":2]" will ass a new item at List[2] and shift right the rest of the array. | Note that List[2] item will not be replaced.
 
-    # myTuples are unchangeable, or immutable
+    '''
+     - Tuples are unchangeable
+     
+     Tuples are unchangeable/immutable , meaning that you cannot change, add, or remove items once the tuple is created.
+     If you want to change a tuple for some apparent reason you need to do the following:
+     
+     myTuple = ("dog", "cat", "sheep")
+     myTempList = list(myTuple)
+     myTempList[1] = "tiger"
+     myTuple = tuple(myTempList)
 
-    # mySets unordered, unchangeable, and do not allow duplicate values
+     print(myTuple)
+    '''
 
+    '''
+        - Set items are unordered, unchangeable, and do not allow duplicate values.
+    '''
+
+    # Print for dict
     myDictionary.update({"year": "2021"})
-    print(f" myList: {myList}", "\n", f"Dictionary: {myDictionary}", "\n")
-    resetDataStructures()
+    print("\33[31m" + " myList: " + "\033[0m" + f"{myList}", "\n", "\33[34m" + "Dictionary: " + "\033[0m" + f"{myDictionary}", "\n")
+    print("__________________________________________________________")
 
-    # Add item
+
+def data_Structures_Add():
     print("\033[1m" + "Add" + "\033[0m")
+    printOriginalDataStructures()
+
     myList.append("appended item")
     myList.insert(2, "inserted Item")
     myList.extend(["Extended", "myList"])
 
-
-    # myTuples cannot be change because immutable
-
+    '''
+        - Tuples are unchangeable/immutable
+    '''
     mySet.add("Added item")
     tempMySet = {"temp1", "temp2"}
     mySet.update(tempMySet)  # To add items from another mySet into the current mySet
 
     myDictionary["color"] = "Added Color"
-    myDictionary.update({"updateColor": "Updated Color"})
-    print(f" myList: {myList}", "\n", f"mySet: {mySet}", "\n", f"myDictionary: {myDictionary}", "\n")
-    resetDataStructures()
+    myDictionary.update({"updateColor": "Updated Color"})  # You can use update to add eventhough its not its intended use
 
-    # Loop Through
+    print("\33[31m", f"myList: \033[0m {myList}", "\33[35m", "\n", f"mySet: \033[0m {mySet}", "\33[34m" "\n", f"Dictionarie: \033[0m {myDictionary}", "\n" "\033[0m")
+    print("__________________________________________________________")
+
+
+
+
+def data_Structures_Loop_Through():
+
     print("\033[1m" + "Loop Through" + "\033[0m")
+    printOriginalDataStructures()
 
-    # myList
+    print("\033[1m" + "\nLoop Through List" + "\033[0m")
+
     for i in myList:
-        print(i)
+        print("Data from \33[31m List: \033[0m", i)
+
+    print("-")
 
     for i in range(len(myList)):
-        print(myList[i])
+        print("Data from \33[31m List: \033[0m using index:", myList[i])
 
-    # myTuple
-    for x in myTuple:
-        print(x)
+    # ----------------------------------------------------
+
+    print("\033[1m" + "\nLoop Through Tuple" + "\033[0m")
+
+    for i in myTuple:
+        print("Data from \33[32m Tuple: \033[0m", i)
+
+    print("-")
 
     for i in range(len(myTuple)):
-        print(myTuple[i])
+        print("Data from \33[32m Tuple: \033[0m using index:", myTuple[i])
 
-    # Set
+    # ----------------------------------------------------
 
-    # Dictionary
+    print("\033[1m" + "\nLoop Through Set" + "\033[0m")
+    for i in mySet:
+        print("Data from \33[35m Set: \033[0m:", i)
+
+    # ----------------------------------------------------
+
+    print("\033[1m" + "\nLoop Through Dictionary" + "\033[0m")
 
     # Print all key names in the dictionary, one by one:
-    for x in myDictionary:
-        print(x)
+    for i in myDictionary:
+        print("Data from\33[34m Dictionary: \033[0m:", i)
+
+    print("-")
 
     # Print all values in the dictionary, one by one:
-    for x in myDictionary:
-        print(myDictionary[x])
+    for i in myDictionary:
+        print("Data from\33[34m Dictionary: \033[0m: using index:", myDictionary[i])
+
+    print("-")
 
     # You can also use the values() method to return values of a dictionary:
     for x in myDictionary.values():
-        print(x)
+        print("Data from\33[34m Dictionary: \033[0m: using .values: ", (x))
+
+    print("-")
 
     # You can use the keys() method to return the keys of a dictionary:
-    for x in myDictionary.keys():
-        print(x)
+    for i in myDictionary.keys():
+        print("Data from\33[34m Dictionary: \033[0m: using .keys():", i)
+
+    print("-")
 
     # Loop through both keys and values, by using the items() method:
-    print("\u001b[31m"
-          "Using mydictionary.items():"
-          "\u001b[0m")
-    for x, y in myDictionary.items():
-        print("Key and value", x, y)
+    for i, j in myDictionary.items():
+        print("Key and Value from\33[34m Dictionary: \033[0m:", i, j)
+    print("__________________________________________________________")
 
 
+data_Structures_Access_Item()
+data_Structures_Add()
+data_Structures_Change_Item()
+data_Structures_Loop_Through()
 
 # _____________________myList comprehensions__________________________#
 # myList Comprehensions:
@@ -176,8 +233,6 @@ def Example_4_myList_Comprehension():
     myList1 = [2, -5, 8]
     print(f"myList * 4 {myList1 * 4}")
 
-
     myList2 = [4 * x for x in myList1]
     print(f"myList2 with comprehension {myList2}")
 
-Example_4_myList_Comprehension()
