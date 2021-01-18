@@ -112,30 +112,30 @@ def data_Structures_Loop_Through():
     print("\033[1m" + "\nLoop Through List" + "\033[0m")
 
     for i in myList:
-        print("Data from \33[31m List: \033[0m", i)
+        print("Data from \33[31m List:\033[0m", i)
 
     print("-")
 
     for i in range(len(myList)):
-        print("Data from \33[31m List: \033[0m using index:", myList[i])
+        print("Data from \33[31m List:\033[0m using index:", myList[i])
 
     # ----------------------------------------------------
 
     print("\033[1m" + "\nLoop Through Tuple" + "\033[0m")
 
     for i in myTuple:
-        print("Data from \33[32m Tuple: \033[0m", i)
+        print("Data from \33[32m Tuple:\033[0m", i)
 
     print("-")
 
     for i in range(len(myTuple)):
-        print("Data from \33[32m Tuple: \033[0m using index:", myTuple[i])
+        print("Data from \33[32m Tuple:\033[0m using index:", myTuple[i])
 
     # ----------------------------------------------------
 
     print("\033[1m" + "\nLoop Through Set" + "\033[0m")
     for i in mySet:
-        print("Data from \33[35m Set: \033[0m", i)
+        print("Data from \33[35m Set:\033[0m", i)
 
     # ----------------------------------------------------
 
@@ -143,31 +143,31 @@ def data_Structures_Loop_Through():
 
     # Print all key names in the dictionary, one by one:
     for i in myDictionary:
-        print("Data from\33[34m Dictionary: \033[0m", i)
+        print("Data from\33[34m Dictionary:\033[0m", i)
 
     print("-")
 
     # Print all values in the dictionary, one by one:
     for i in myDictionary:
-        print("Data from\33[34m Dictionary \033[0m using index:", myDictionary[i])
+        print("Data from\33[34m Dictionary\033[0m using index:", myDictionary[i])
 
     print("-")
 
     # You can also use the values() method to return values of a dictionary:
     for x in myDictionary.values():
-        print("Data from\33[34m Dictionary \033[0m using .values: ", (x))
+        print("Data from\33[34m Dictionary\033[0m using .values: ", (x))
 
     print("-")
 
     # You can use the keys() method to return the keys of a dictionary:
     for i in myDictionary.keys():
-        print("Data from\33[34m Dictionary \033[0m using .keys():", i)
+        print("Data from\33[34m Dictionary\033[0m using .keys():", i)
 
     print("-")
 
     # Loop through both keys and values, by using the items() method:
     for i, j in myDictionary.items():
-        print("Key and Value from\33[34m Dictionary: \033[0m", i, j)
+        print("Key and Value from\33[34m Dictionary:\033[0m", i, j)
     print("__________________________________________________________")
 
 
