@@ -72,10 +72,10 @@ class dbopen(object):
 
 if __name__ == '__main__':
     with dbopen('./testdb.db') as db:
-        db.execute("CREATE TABLE IF NOT EXISTS python_user (id integer primary key, name text, age int)")
-        db.execute("INSERT INTO python_user VALUES ('Thomas', 31)")
-        db.execute("INSERT INTO python_user VALUES ('Bo', 35)")
-        db.execute("INSERT INTO python_user VALUES ('Lotte', 21)")
+        db.execute("CREATE TABLE IF NOT EXISTS python_user (id int, name text, age int)")
+        db.execute("INSERT INTO python_user VALUES (1, 'Thomas', 31)")
+        db.execute("INSERT INTO python_user VALUES (2, 'Bo', 35)")
+        db.execute("INSERT INTO python_user VALUES (3, 'Lotte', 21)")
         db.execute("SELECT * FROM python_user")
         result = db.fetchall()
         print(result)
