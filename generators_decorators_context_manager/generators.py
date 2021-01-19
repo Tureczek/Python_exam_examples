@@ -1,6 +1,7 @@
 import sys
 import cProfile
 
+# yield
 ########################################################################################################################
 # Generators vs list example
 
@@ -11,6 +12,7 @@ def generator_memory():
     print('Showing the memory reserved by a list and a generator\n')
     print(f'The size of list: {sys.getsizeof(nums_squared_lc)} bytes')
     print(f'The size of generator: {sys.getsizeof(nums_squared_gc)}  bytes')
+
 
 # Generators for optimizing memory
 # If the list is smaller than the running machine’s available memory, then list comprehensions can be faster to evaluate.
@@ -99,6 +101,7 @@ def adv_throw():
         pal_gen_throw.send(10** (digits))
 
 
+
 # .close() is good when...
 
 def adv_close():
@@ -143,6 +146,6 @@ def data_pipeline():
     print('\n'.join([str(i) for i in company_dicts]))
 
     total_series_a = sum(funding)
-    #print(f'Total series A fundraising: ${total_series_a}')
+    print(f'Total series A fundraising: ${total_series_a}')
 
 ########################################################################################################################

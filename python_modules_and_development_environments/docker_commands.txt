@@ -1,0 +1,20 @@
+Jupyter: -> While in correct directory
+docker run --rm -p 8888:8888 -v ${​​PWD}​​:/home/jovyan/work jupyter/datascience-notebook
+
+Docker:
+create a base container:
+docker create --name docker_for_presentation -p 80:80 nginx:alpine // webserver
+
+
+
+
+
+
+
+
+$ docker run -it --rm ubuntu  // creates and runs a simple ubuntu container with interactive access and removal after use.
+$ docker run -it --rm python bash // same as above, but now a python image. starts in a bash terminal.
+$ docker run -it --rm -v ${PWD}:/docs python bash  // same as above, but now sharing files from the current directory to/from /docs folder in the container.
+
+$ docker build --tag webscrabing:latest .
+$ docker run -it --rm -v ${PWD}:/docs webscrabing
