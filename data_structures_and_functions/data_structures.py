@@ -1,15 +1,32 @@
 from generators_decorators_context_manager.decorators import timer
-
-# _________________________Data Structures__________________________#
-# Data Structures:
-#       myList = [val, val, val, val] | myList items are ordered, changeable, and allow duplicate values and can be accessed by index.
-#       myTuple = (val, val, val, val) | A myTuple is a collection which is ordered and unchangeable.
-#       mySet = {val, val, val, val} | A mySet is a collection which is both unordered and unindexed and cannot have duplicate
-#       myDictionary = {
-#                       "key": "value",
-#                       "key": "value",
-#                       "key": "value"
-#       }
+'''
+ _________________________Data Structures__________________________
+ Unordered
+    When we say that dictionaries are unordered, it means that the items does not have a defined order,
+    you cannot refer to an item by using an index.
+    
+    Set items can appear in a different order every time you use them.
+    
+ Changeable
+    Dictionaries are changeable, meaning that we can change, add or remove items after the dictionary has been created. 
+    
+ Duplicate
+    Allows can have two items with the same value.
+    
+    Dictionaries cannot have two items with the same "key"    
+ 
+ 
+ 
+ Data Structures:
+       myList = [val, val, val, val]  | List items are ordered, changeable, and allow duplicate values.
+       myTuple = (val, val, val, val) | A Tuple is a collection which is ordered and unchangeable.
+       mySet = {val, val, val, val}   | A Set is a collection which is both unordered and cannot have duplicate
+       myDictionary = {               | A Dictionary is unordered, changeable and does not allow duplicates.
+                       "key": "value",
+                       "key": "value",
+                       "key": "value"
+       }
+'''
 
 myList = [1, True, "name", ["name1", "name2"]]
 myTuple = (1, 2, 3, 4)
@@ -56,6 +73,8 @@ def data_Structures_Change_Item():
     #   1. "[1:" will take item at List[1] and replace with "Splitted changed item".
     #   2. ":2]" will ass a new item at List[2] and shift right the rest of the array. | Note that List[2] item will not be replaced.
 
+    # ----------------------------------------------------
+
     '''
      - Tuples are unchangeable
      
@@ -70,11 +89,14 @@ def data_Structures_Change_Item():
      print(myTuple)
     '''
 
+    # ----------------------------------------------------
+
     '''
         - Set items are unordered, unchangeable, and do not allow duplicate values.
     '''
 
-    # Print for dict
+    # ----------------------------------------------------
+
     myDictionary.update({"year": "2021"})
     print("\33[31m" + " myList: " + "\033[0m" + f"{myList}", "\n", "\33[34m" + "Dictionary: " + "\033[0m" + f"{myDictionary}", "\n")
     print("__________________________________________________________")
@@ -88,12 +110,19 @@ def data_Structures_Add():
     myList.insert(2, "inserted Item")
     myList.extend(["Extended", "myList"])
 
+    # ----------------------------------------------------
+
     '''
         - Tuples are unchangeable/immutable
     '''
+
+    # ----------------------------------------------------
+
     mySet.add("Added item")
     tempMySet = {"temp1", "temp2"}
     mySet.update(tempMySet)  # To add items from another mySet into the current mySet
+
+    # ----------------------------------------------------
 
     myDictionary["color"] = "Added Color"
     myDictionary.update({"updateColor": "Updated Color"})  # You can use update to add eventhough its not its intended use
@@ -176,17 +205,19 @@ data_Structures_Add()
 data_Structures_Change_Item()
 data_Structures_Loop_Through()
 
-# _____________________myList comprehensions__________________________#
-# myList Comprehensions:
-#       [ expression for val in collection ]
-#       [ expression for val in collection if <statement> ]
-#       [ expression for val in collection if <statement_1> and <statement_2> ]
-#       [ expression for value1 in collection_1 and value2 in val in collection_2 ]
+'''
+ _____________________myList comprehensions__________________________#
+ myList Comprehensions:
+       [ expression for val in collection ]
+       [ expression for val in collection if <statement> ]
+       [ expression for val in collection if <statement_1> and <statement_2> ]
+       [ expression for value1 in collection_1 and value2 in val in collection_2 ]
+'''
 
+# Example_1 | Showing [ expression for val in collection ] |
+# This example shows how you myList comprehensions work vs a normal forloop
 
-# Example_1 | Showing [ expression for val in collection ] | This example shows how you myList comprehensions work vs a normal forloop
-
-def Example_1_myList_Comprehension():
+def example_1_myList_Comprehension():
     myList1 = []
 
     for i in range(1, 101):
@@ -200,8 +231,9 @@ def Example_1_myList_Comprehension():
     print(myList2)
 
 
-# Example_2 | Showing [ expression for val in collection if <statement> ] | How to sort movies using comprehension with if statement
-def Example_2_myList_Comprehension():
+# Example_2 | Showing [ expression for val in collection if <statement> ] |
+# How to sort movies using comprehension with if statement
+def example_2_myList_Comprehension():
     movies1 = ["Avatar", "Babe watch", "Ghostbusters", "Amandas Vacation", "Gattaca", "Star wars", "Gandhi"]
     foundMovies1 = []
 
@@ -218,8 +250,8 @@ def Example_2_myList_Comprehension():
     print(foundMovies)
 
 
-# Each element in the forloop is a myTuple, then we check if the year is under 2000 and print only the title
-def Example_3_myList_Comprehension():
+# Each element in the forloop is a Tuple, then we check if the year is under 2000 and print only the title
+def example_3_myList_Comprehension():
     movies1 = [("Avatar", 1942), ("Babe watch", 1999), ("Ghostbusters", 2122), ("Amandas Vacation", 208),
                ("Gattaca", 1818), ("Star wars", 1922), ("Gandhi", 2011)]
 
@@ -229,7 +261,7 @@ def Example_3_myList_Comprehension():
     print(foundMoviesByYear)
 
 
-def Example_4_myList_Comprehension():
+def example_4_myList_Comprehension():
     myList1 = [2, -5, 8]
     print(f"myList * 4 {myList1 * 4}")
 
