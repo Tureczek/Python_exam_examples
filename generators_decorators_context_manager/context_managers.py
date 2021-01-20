@@ -1,5 +1,3 @@
-# from pymongo import MongoClient
-
 import sqlite3
 
 
@@ -26,7 +24,8 @@ class ContextManager():  # Importent to implement the enter() and exit() methods
 
 
 # with ContextManager() as manager:
-#    print('statement body - in this block the code goes')
+#     print('statement body - in this block the code goes')
+
 
 ########################################################################################################################
 # File management with context manager and a statement
@@ -46,10 +45,11 @@ class FileManager:
 
 
 # Opening a file with FileManager
-with FileManager('test.txt', 'w') as f:
-    f.write('Test')
+# with FileManager('test.txt', 'a') as f:    # a = append, r = read, w = write,
+#     f.write('Test\n')
 
-print(f.closed)  # Has already been taken care of.
+
+# print(f.closed)  # Has already been taken care of.
 
 
 ########################################################################################################################
@@ -70,7 +70,7 @@ class dbopen(object):
         self.conn.close()
 
 
-if __name__ == '__main__':
+def run_db():
     with dbopen('./testdb.db') as db:
         db.execute("CREATE TABLE IF NOT EXISTS python_user (id int, name text, age int)")
         db.execute("INSERT INTO python_user VALUES (1, 'Thomas', 31)")
@@ -80,3 +80,4 @@ if __name__ == '__main__':
         result = db.fetchall()
         print(result)
 
+#run_db()

@@ -8,7 +8,7 @@ from generators_decorators_context_manager.decorators import timer
     Set items can appear in a different order every time you use them.
     
  Changeable
-    Dictionaries are changeable, meaning that we can change, add or remove items after the dictionary has been created. 
+    Changeable, meaning that we can change, add or remove items after the dictionary has been created. 
     
  Duplicate
     Allows can have two items with the same value.
@@ -201,8 +201,9 @@ def data_Structures_Loop_Through():
 
 
 data_Structures_Access_Item()
-data_Structures_Add()
+
 data_Structures_Change_Item()
+data_Structures_Add()
 data_Structures_Loop_Through()
 
 '''

@@ -1,0 +1,62 @@
+INFO:root: Call at 12:59:19 of function '__init__' with the value None
+INFO:root: Call at 12:59:19 of function '__init__' with the value None
+INFO:root: Call at 12:59:19 of function '__init__' with the value None
+INFO:root: Call at 13:00:42 of function 'cook' with the value None
+INFO:root: Call at 13:00:42 of function 'cook_vegan' with the value None
+INFO:root: Call at 13:00:42 of function 'sound_wise' with the value None
+INFO:root: Call at 13:00:42 of function 'make_annoying_sounds' with the value None
+INFO:root: Call at 13:00:42 of function 'tell_bad_joke' with the value None
+INFO:root: Call at 13:03:49 of function 'cook' with the value None
+INFO:root: Call at 13:03:49 of function 'cook_vegan' with the value None
+INFO:root: Call at 13:03:49 of function 'sound_wise' with the value None
+INFO:root: Call at 13:03:49 of function 'tell_bad_joke' with the value None
+INFO:root: Call at 13:04:55 of function 'cook' with the value None
+INFO:root: Call at 13:04:55 of function 'cook_vegan' with the value None
+INFO:root: Call at 13:04:55 of function 'tell_bad_joke' with the value None
+INFO:root: Call at 13:04:55 of function 'sound_wise' with the value None
+INFO:root: Call at 13:04:55 of function 'make_annoying_sounds' with the value 'Jason: "MEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIIIIIIOOOOOOOOOUUUUUUU"'
+INFO:root: Call at 13:05:22 of function 'cook' with the value None
+INFO:root: Call at 13:05:22 of function 'cook_vegan' with the value None
+INFO:root: Call at 13:05:22 of function 'tell_bad_joke' with the value None
+INFO:root: Call at 13:05:22 of function 'sound_wise' with the value None
+INFO:root: Call at 13:05:22 of function 'make_annoying_sounds' with the value 'Jason: "MEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIIIIIIOOOOOOOOOUUUUUUU"'
+INFO:root: Call at 13:06:21 of function 'cook' with the value 'Jason: "Delicious food coming up!"'
+INFO:root: Call at 13:06:21 of function 'cook_vegan' with the value 'Jason: "Im gonna make delicious vegan food..."'
+INFO:root: Call at 13:06:21 of function 'tell_bad_joke' with the value 'Jason: "Telling the same old bad joke.. Again!"'
+INFO:root: Call at 13:06:21 of function 'sound_wise' with the value 'Jason: "...so you see, that\'s why im very wise..."'
+INFO:root: Call at 13:06:21 of function 'make_annoying_sounds' with the value 'Jason: "MEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIIIIIIOOOOOOOOOUUUUUUU"'
+INFO:root: Call at 13:06:54 of function 'cook' with the value 'Jason: "Delicious food coming up!"'
+INFO:root: Call at 13:06:54 of function 'cook_vegan' with the value 'Jason: "Im gonna make delicious vegan food..."'
+INFO:root: Call at 13:06:54 of function 'tell_bad_joke' with the value 'Jason: "Telling the same old bad joke.. Again!"'
+INFO:root: Call at 13:06:54 of function 'sound_wise' with the value 'Jason: "...so you see, that\'s why im very wise..."'
+INFO:root: Call at 13:06:54 of function 'make_annoying_sounds' with the value 'Jason: "MEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIIIIIIOOOOOOOOOUUUUUUU"'
+INFO:root: Call at 13:07:26 of function 'cook' with the value 'Jason: "Delicious food coming up!"'
+INFO:root: Call at 13:07:26 of function 'cook_vegan' with the value 'Jason: "Im gonna make delicious vegan food..."'
+INFO:root: Call at 13:07:26 of function 'tell_bad_joke' with the value 'Jason: "Telling the same old bad joke.. Again!"'
+INFO:root: Call at 13:07:26 of function 'sound_wise' with the value 'Jason: "...so you see, that\'s why im very wise..."'
+INFO:root: Call at 13:07:26 of function 'make_annoying_sounds' with the value 'Jason: "MEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIIIIIIOOOOOOOOOUUUUUUU"'
+INFO:root: Call at 13:32:37 of function 'cook' with the value 'Jason Henriksen: "Delicious food coming up!"'
+INFO:root: Call at 13:32:37 of function 'cook_vegan' with the value 'Jason Henriksen: "Im gonna make delicious vegan food..."'
+INFO:root: Call at 13:32:37 of function 'tell_bad_joke' with the value 'Jason Henriksen: "Telling the same old bad joke.. Again!"'
+INFO:root: Call at 13:32:37 of function 'sound_wise' with the value 'Jason Henriksen: "...so you see, that\'s why im very wise..."'
+INFO:root: Call at 13:32:37 of function 'make_annoying_sounds' with the value 'Jason Henriksen: "MEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIIIIIIOOOOOOOOOUUUUUUU"'
+INFO:root: Call at 13:33:43 of function 'cook' with the value 'Jason Henriksen: "Delicious food coming up!"'
+INFO:root: Call at 13:33:43 of function 'cook_vegan' with the value 'Jason Henriksen: "Im gonna make delicious vegan food..."'
+INFO:root: Call at 13:33:43 of function 'tell_bad_joke' with the value 'Jason Henriksen: "Telling the same old bad joke.. Again!"'
+INFO:root: Call at 13:33:43 of function 'sound_wise' with the value 'Jason Henriksen: "...so you see, that\'s why im very wise..."'
+INFO:root: Call at 13:33:43 of function 'make_annoying_sounds' with the value 'Jason Henriksen: "MEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIIIIIIOOOOOOOOOUUUUUUU"'
+INFO:root: Call at 13:33:55 of function 'cook' with the value 'Jason Henriksen: "Delicious food coming up!"'
+INFO:root: Call at 13:33:55 of function 'cook_vegan' with the value 'Jason Henriksen: "Im gonna make delicious vegan food..."'
+INFO:root: Call at 13:33:55 of function 'tell_bad_joke' with the value 'Jason Henriksen: "Telling the same old bad joke.. Again!"'
+INFO:root: Call at 13:33:55 of function 'sound_wise' with the value 'Jason Henriksen: "...so you see, that\'s why im very wise..."'
+INFO:root: Call at 13:33:55 of function 'make_annoying_sounds' with the value 'Jason Henriksen: "MEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIIIIIIOOOOOOOOOUUUUUUU"'
+INFO:root: Call at 13:34:32 of function 'cook' with the value 'Jason Henriksen: "Delicious food coming up!"'
+INFO:root: Call at 13:34:32 of function 'cook_vegan' with the value 'Jason Henriksen: "Im gonna make delicious vegan food..."'
+INFO:root: Call at 13:34:32 of function 'tell_bad_joke' with the value 'Jason Henriksen: "Telling the same old bad joke.. Again!"'
+INFO:root: Call at 13:34:32 of function 'sound_wise' with the value 'Jason Henriksen: "...so you see, that\'s why im very wise..."'
+INFO:root: Call at 13:34:32 of function 'make_annoying_sounds' with the value 'Jason Henriksen: "MEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIIIIIIOOOOOOOOOUUUUUUU"'
+INFO:root: Call at 13:35:10 of function 'cook' with the value 'Jason Henriksen: "Delicious food coming up!"'
+INFO:root: Call at 13:35:10 of function 'cook_vegan' with the value 'Jason Henriksen: "Im gonna make delicious vegan food..."'
+INFO:root: Call at 13:35:10 of function 'tell_bad_joke' with the value 'Jason Henriksen: "Telling the same old bad joke.. Again!"'
+INFO:root: Call at 13:35:10 of function 'sound_wise' with the value 'Jason Henriksen: "...so you see, that\'s why im very wise..."'
+INFO:root: Call at 13:35:10 of function 'make_annoying_sounds' with the value 'Jason Henriksen: "MEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIIIIIIOOOOOOOOOUUUUUUU"'

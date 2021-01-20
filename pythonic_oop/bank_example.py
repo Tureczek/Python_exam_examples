@@ -57,6 +57,7 @@ b = Bank('Nordea')
 print(b)
 b.accounts.append(Account(Customer('Hugo', 35), 758))
 b.accounts.append(Account(Customer('Anders', 63), 95831))
+print(b)
 print(b.accounts)
 
 print(b.accounts[0].number)

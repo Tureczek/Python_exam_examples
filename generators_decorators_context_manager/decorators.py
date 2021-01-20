@@ -1,14 +1,3 @@
-'''
-Decorators
-
-Going through:
-
-- What are they.
-- How to manipulate .
-- When do we use them.
-- Why do we use them.
-
-'''
 import functools
 from datetime import datetime
 import time
@@ -24,6 +13,7 @@ def before_and_after(func):
         print('This is printed after the function')
 
     return wrapper
+
 
 ########################################################################################################################
 
@@ -56,9 +46,10 @@ def time_stamp(func):
     def wrapper_time_stamp(*args):
         wrapper_time_stamp.time_call = current_time
         print(f'Call at {wrapper_time_stamp.time_call} of function {func.__name__!r}')
-        logging.info(f" Call at {wrapper_time_stamp.time_call} of function {func.__name__!r} with the value {func(*args)!r}")
+        logging.info(
+            f" Call at {wrapper_time_stamp.time_call} of function {func.__name__!r} with the value {func(*args)!r}")
         return func(*args)
-    wrapper_time_stamp.time_call = 0
+
     return wrapper_time_stamp
 
 
@@ -73,6 +64,7 @@ def cache(func):
         if cache_key not in wrapper_cache.cache:
             wrapper_cache.cache[cache_key] = func(*args, **kwargs)
         return wrapper_cache.cache[cache_key]
+
     wrapper_cache.cache = dict()
     return wrapper_cache
 
@@ -83,5 +75,6 @@ def count_calls(func):
         wrapper_count_calls.num_calls += 1
         print(f'Call {wrapper_count_calls.num_calls} of {func.__name__!r}')
         return func(*args, **kwargs)
+
     wrapper_count_calls.num_calls = 0
     return wrapper_count_calls
